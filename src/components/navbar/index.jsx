@@ -43,7 +43,7 @@ function Navbar() {
             <Link to={"/"} className="w-[100px]">
               <img className="w-full" src={logo} alt="" />
             </Link>
-            <div className="flex items-center gap-[80px] font-normal text-2xl text-white">
+            <div className="flex items-center gap-[60px] font-normal text-2xl text-white">
               <Link to={"#"}>Главная</Link>
               <Link className="flex gap-2" to={"#"}>
                 <span>О</span> нас
