@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+.btn {
+  border-radius: 7px;
+  width: 248px;
+  height: 62px;
+  padding: 10px 40px;
+  box-shadow: 0 0 35px #ffe000;
+  background: #ffe000;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navbar {
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}
+
+body {
+  background-color: #111111;
+}
+.showcase {
+  position: sticky;
+  z-index: 99;
+  background-image: url(./assets/bg_showcase.png);
+  width: 100%;
+  background-color: #000;
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 0px 20px 20px;
+}
