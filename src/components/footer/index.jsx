@@ -1,7 +1,10 @@
 import { Link } from "react-router";
 import logo from "../../assets/logo.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-yellow-400 w-full">
       <div className=" w-[90%] m-auto px-4 py-8">
@@ -15,7 +18,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-black font-medium mb-4 text-center md:text-left max-w-xs">
-              SLOGAN ILorem ipsum dolor sit amet, consectetur adipiscing elit.
+              {t("footer.slogan")}
             </p>
 
             <div className="flex space-x-3">
@@ -94,52 +97,56 @@ const Footer = () => {
           </div>
 
           <div className="mb-8 md:mb-0">
-            <h3 className="text-2xl font-bold mb-4 md:mb-6">Курсы</h3>
+            <h3 className="text-2xl font-bold mb-4 md:mb-6">
+              {t("footer.courses")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:underline">
-                  Работотехника
+                  {t("footer.robotics")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Английский для взрослых
+                  {t("footer.english_adults")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Английский для детей
+                  {t("footer.english_kids")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Шахмат
+                  {t("footer.chess")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Живопись
+                  {t("footer.painting")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-4 md:mb-6">Контакты</h3>
+            <h3 className="text-2xl font-bold mb-4 md:mb-6">
+              {t("footer.contacts")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:underline">
-                  Телеграм
+                  {t("footer.telegram")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Инстаграм
+                  {t("footer.instagram")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Ютюб
+                  {t("footer.youtube")}
                 </a>
               </li>
             </ul>
@@ -147,9 +154,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-4 border-t border-black/10">
-          <p className="text-sm">
-            Ideallux.com © 2000-2024, All Rights Reserved
-          </p>
+          <p className="text-sm">{t("footer.rights_reserved")}</p>
         </div>
       </div>
     </footer>

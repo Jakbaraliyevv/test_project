@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-function Navbar() {
+function Navbar({ changLanguage }) {
+  const changLanguageClick = (value) => {
+    changLanguage(value);
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Курсы");
   const [active, setActive] = useState(false);
@@ -38,6 +43,8 @@ function Navbar() {
     setIsOpen(false);
   };
 
+  const { t } = useTranslation();
+
   return (
     <section className="navbar bg-[#ffe000] py-[10px]">
       <div className="bg-black">
@@ -47,10 +54,11 @@ function Navbar() {
               <img className="w-full" src={logo} alt="Logo" />
             </Link>
 
-            <div className="hidden md:flex items-center gap-[30px] lg:gap-[60px] font-normal text-lg lg:text-2xl text-white">
-              <Link to={"#"}>Главная</Link>
+            <div className="hidden md:flex items-center gap-[20px] lg:gap-[60px] font-normal text-lg lg:text-xl text-white">
+              <Link to={"#"}>{t("navbar.home")}</Link>
               <Link className="flex gap-2" to={"#"}>
-                <span>О</span> нас
+                <span> {t("navbar.span")}</span>
+                {t("navbar.about")}
               </Link>
 
               <div className="w-full max-w-md">
@@ -95,14 +103,19 @@ function Navbar() {
                 </div>
               </div>
 
-              <Link to={"#"}>Контакты</Link>
-              <button className="btn hidden lg:block">Позвонить</button>
+              <Link to={"#"}>{t("navbar.contact")}</Link>
+              <button className="btn  hidden lg:block">
+                {t("navbar.aloqa")}
+              </button>
             </div>
 
             <div className="flex items-center gap-3 md:gap-[20px]">
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setActive(true)}
+                  onClick={() => {
+                    setActive(true);
+                    changLanguageClick("rus");
+                  }}
                   className={
                     active
                       ? `border border-[#033538] rounded-[14px] w-[60px] sm:w-[70px] md:w-[84px] h-[35px] sm:h-[40px] md:h-[52px] bg-[#f0d625] font-normal text-[14px] sm:text-[16px] md:text-[21px] text-white`
@@ -117,7 +130,10 @@ function Navbar() {
                       ? "font-normal text-[14px] sm:text-[16px] md:text-[21px] text-[#f0d625]"
                       : `border border-[#033538] rounded-[14px] w-[60px] sm:w-[70px] md:w-[84px] h-[35px] sm:h-[40px] md:h-[52px] bg-[#f0d625] font-normal text-[14px] sm:text-[16px] md:text-[21px] text-white`
                   }
-                  onClick={() => setActive(false)}
+                  onClick={() => {
+                    setActive(false);
+                    changLanguageClick("uzb");
+                  }}
                 >
                   Uz
                 </button>

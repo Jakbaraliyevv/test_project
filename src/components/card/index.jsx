@@ -7,8 +7,11 @@ import card5 from "../../assets/card_img5.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 function CardComponents() {
+  const { t } = useTranslation();
+
   const data = [
     {
       id: 1,
@@ -45,8 +48,8 @@ function CardComponents() {
   return (
     <section className="py-10 md:py-20">
       <div className="w-[90%] mx-auto">
-        <h1 className="text-[36px] md:text-[60px] lg:text-[96px] leading-[104%] font-bold uppercase text-center text-[#f0d625] pb-10 md:pb-[100px]">
-          Авторские курсы от JustRobotics
+        <h1 className="text-[36px] md:text-[60px] lg:text-[76px] leading-[104%] font-bold uppercase text-center text-[#f0d625] pb-10 md:pb-[100px]">
+          {t("card.header")}
         </h1>
 
         <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-[40px]">
