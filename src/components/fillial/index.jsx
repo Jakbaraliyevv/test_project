@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Phone, Clock, MapPin } from "lucide-react";
+import { ChevronDown, Phone, Clock, MapPin } from "lucide-react";
 
 export default function FillialComponents() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeLocation, setActiveLocation] = useState("ФИЛИАЛ Ц4");
 
   const courses = [
@@ -21,12 +21,11 @@ export default function FillialComponents() {
     <div className="flex justify-center items-center  bg-gray-900 p-[40px]">
       <div className="w-full max-w-6xl">
         <div className="text-center mb-16">
-          <h1 className="text-[85px] leading-[104%] font-bold uppercase text-center text-[#f0d625]">
+          <h1 className="text-[85px] leading-[104%] font-bold uppercase text-center text-[#f0d625] max-[440px]:text-[40px]">
             ПОЛУЧИТЕ БЕСПЛАТНЫЙ ПЕРВЫЙ УРОК
           </h1>
         </div>
 
-        {/* Форма регистрации - горизонтальное расположение для desktop */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-16">
           <input
             type="text"
@@ -83,10 +82,9 @@ export default function FillialComponents() {
           </button>
         </div>
 
-        {/* Кнопки выбора филиала */}
         <div className="flex justify-center gap-6 mb-16">
           <button
-            className={`py-3 px-6 rounded font-bold transition-colors shadow-lg ${
+            className={`py-3 px-6 rounded font-bold transition-colors shadow-lg max-[440px]:text-[10px] ${
               activeLocation === "ФИЛИАЛ Ц4"
                 ? "bg-yellow-400 text-black"
                 : "bg-transparent text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400/20"
@@ -97,7 +95,7 @@ export default function FillialComponents() {
           </button>
 
           <button
-            className={`py-3 px-6 rounded font-bold transition-colors ${
+            className={`py-3 px-6 rounded font-bold transition-colors max-[440px]:text-[12px] ${
               activeLocation === "ФИЛИАЛ БЕРУНИ"
                 ? "bg-yellow-400 text-black"
                 : "bg-transparent text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-400/20"
@@ -108,7 +106,6 @@ export default function FillialComponents() {
           </button>
         </div>
 
-        {/* Информация о контактах */}
         <div className="flex justify-center flex-wrap gap-10 mt-10">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">

@@ -18,7 +18,6 @@ const Footer = () => {
               SLOGAN ILorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
 
-            {/* Social Media Icons */}
             <div className="flex space-x-3">
               <a
                 href="#"
@@ -94,7 +93,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Courses Section - Center on desktop, Middle on mobile */}
           <div className="mb-8 md:mb-0">
             <h3 className="text-2xl font-bold mb-4 md:mb-6">Курсы</h3>
             <ul className="space-y-2">
@@ -126,7 +124,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contacts Section - Right on desktop, Bottom on mobile */}
           <div>
             <h3 className="text-2xl font-bold mb-4 md:mb-6">Контакты</h3>
             <ul className="space-y-2">
@@ -149,7 +146,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright Section */}
         <div className="mt-8 pt-4 border-t border-black/10">
           <p className="text-sm">
             Ideallux.com © 2000-2024, All Rights Reserved

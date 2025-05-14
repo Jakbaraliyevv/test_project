@@ -15,9 +15,9 @@ function Home() {
       <Showcase />
       <Studentov />
       <Title />
-      {/* <CardComponents /> */}
+      <CardComponents />
       <VideoSlider />
-      {/* <FillialComponents /> */}
+      <FillialComponents />
       <MapComponents />
       <Footer />
     </section>
