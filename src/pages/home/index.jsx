@@ -12,14 +12,14 @@ function Home() {
   return (
     <section>
       <Navbar />
-      {/* <Showcase /> */}
+      <Showcase />
       {/* <Studentov /> */}
       {/* <Title /> */}
       {/* <CardComponents /> */}
       {/* <VideoSlider /> */}
       {/* <FillialComponents /> */}
-      {/* <MapComponents /> */}
-      {/* <Footer /> */}
+      <MapComponents />
+      <Footer />
     </section>
   );
 }
