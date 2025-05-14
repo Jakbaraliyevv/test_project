@@ -1,4 +1,6 @@
 import CardComponents from "../../components/card";
+import FillialComponents from "../../components/fillial";
+import MapComponents from "../../components/map";
 import Navbar from "../../components/navbar";
 import Showcase from "../../components/showcase";
 import Studentov from "../../components/studentov";
@@ -14,6 +16,8 @@ function Home() {
       <Title />
       <CardComponents />
       <VideoSlider />
+      <FillialComponents />
+      <MapComponents />
     </section>
   );
 }
