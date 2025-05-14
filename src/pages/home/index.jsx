@@ -1,5 +1,6 @@
 import CardComponents from "../../components/card";
 import FillialComponents from "../../components/fillial";
+import Footer from "../../components/footer";
 import MapComponents from "../../components/map";
 import Navbar from "../../components/navbar";
 import Showcase from "../../components/showcase";
@@ -11,13 +12,14 @@ function Home() {
   return (
     <section>
       <Navbar />
-      <Showcase />
-      <Studentov />
-      <Title />
-      <CardComponents />
-      <VideoSlider />
-      <FillialComponents />
-      <MapComponents />
+      {/* <Showcase /> */}
+      {/* <Studentov /> */}
+      {/* <Title /> */}
+      {/* <CardComponents /> */}
+      {/* <VideoSlider /> */}
+      {/* <FillialComponents /> */}
+      {/* <MapComponents /> */}
+      {/* <Footer /> */}
     </section>
   );
 }
