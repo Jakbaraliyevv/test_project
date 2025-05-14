@@ -5,6 +5,10 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+button {
+  cursor: pointer;
+}
 .btn {
   border-radius: 7px;
   width: 248px;
@@ -27,6 +31,7 @@
 body {
   background-color: #111111;
 }
+
 .showcase {
   position: sticky;
   z-index: 99;
@@ -37,4 +42,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0px 0px 20px 20px;
+}
+
+.cards {
+  position: sticky;
+  z-index: 99;
+  background-image: url(./assets/bg_showcase.png);
+  width: 100%;
+  background-color: #000;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fde68a !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fde68a !important; 
+  opacity: 1;
 }
