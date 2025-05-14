@@ -59,6 +59,9 @@ export default function CourseRegistrationForm() {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
 
         <div className="relative flex flex-col md:flex-row">
+          <div className="w-full md:w-1/3 flex items-center justify-center p-6 hidden max-[768px]:block">
+            <img src={roboto2} alt="Robot" className="w-48 h-auto " />
+          </div>
           <div className="w-full md:w-2/3 bg-white rounded-lg p-8">
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -180,16 +183,11 @@ export default function CourseRegistrationForm() {
             </form>
           </div>
 
-          <div className="w-full md:w-1/3 flex items-center justify-center p-6">
+          <div className="w-full md:w-1/3 flex items-center justify-center p-6 max-[768px]:hidden block">
             <img
               src={roboto}
               alt="Robot"
               className="w-48 h-auto  max-[768px]:hidden block"
-            />
-            <img
-              src={roboto2}
-              alt="Robot"
-              className="w-48 h-auto hidden max-[768px]:block"
             />
           </div>
         </div>
