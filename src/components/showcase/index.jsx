@@ -5,7 +5,7 @@ function Showcase() {
     <section className="showcase shadow-2xl shadow-black">
       <div className="w-[90%] m-auto">
         <div className="flex items-center justify-between">
-          <div className="rounded-[30px] w-[651px] h-[474px] bg-white flex  flex-col gap-[30px] p-[35px] max-[768px]:w-[50%] max-[768px]:h-auto  max-[768px]:rounded-[10px] max-[768px]:p-[20px] max-[440px]:p-[10px] max-[440px]:gap-[10px]">
+          <div className="rounded-[30px] w-[651px] h-[474px] bg-white flex  flex-col gap-[30px] p-[35px] max-[768px]:w-[60%] max-[768px]:h-auto  max-[768px]:rounded-[10px] max-[768px]:p-[20px] max-[440px]:p-[10px] max-[440px]:gap-[10px]">
             <h1 className="font-semibold text-[84px] text-black max-[768px]:text-[35px] max-[440px]:text-[22px] ">
               JustRobotics
             </h1>
@@ -21,9 +21,9 @@ function Showcase() {
               </button>
             </div>
           </div>
-          <div className="w-full">
+          <div className="max-[768px]:w-full max-[420px]:w-[45%]">
             <img
-              className="h-[75vh] max-[440px]:h-[50vh]"
+              className="h-[75vh] max-[440px]:h-[50vh] max-[420px]:h-[40vh]"
               src={showcase_image}
               alt=""
             />

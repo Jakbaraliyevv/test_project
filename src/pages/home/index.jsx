@@ -13,10 +13,10 @@ function Home() {
     <section>
       <Navbar />
       <Showcase />
-      {/* <Studentov /> */}
-      {/* <Title /> */}
+      <Studentov />
+      <Title />
       {/* <CardComponents /> */}
-      {/* <VideoSlider /> */}
+      <VideoSlider />
       {/* <FillialComponents /> */}
       <MapComponents />
       <Footer />
