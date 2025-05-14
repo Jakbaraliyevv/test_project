@@ -1,8 +1,8 @@
 function Title() {
   return (
-    <section className="bg-[#fff] h-[450px] flex items-center mt-[-25px]">
+    <section className="bg-[#fff] h-auto py-[120px] flex items-center mt-[-25px] max-[440px]:py-[40px]">
       <div className="w-[90%] m-auto">
-        <div className="text-[19px] leading-[2]">
+        <div className="text-[19px] leading-[2] max-[440px]:text-[15px]">
           <p>
             <span className="font-bold">JustRobotics</span> – это современный
             учебный центр, специализирующийся на технологиях, искусстве и
