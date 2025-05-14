@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import roboto from "../../assets/regster.png";
+import roboto2 from "../../assets/showcase_img.png";
 export default function CourseRegistrationForm() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -180,7 +181,16 @@ export default function CourseRegistrationForm() {
           </div>
 
           <div className="w-full md:w-1/3 flex items-center justify-center p-6">
-            <img src={roboto} alt="Robot" className="w-48 h-auto" />
+            <img
+              src={roboto}
+              alt="Robot"
+              className="w-48 h-auto  max-[768px]:hidden block"
+            />
+            <img
+              src={roboto2}
+              alt="Robot"
+              className="w-48 h-auto hidden max-[768px]:block"
+            />
           </div>
         </div>
       </div>
