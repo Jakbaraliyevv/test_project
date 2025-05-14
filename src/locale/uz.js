@@ -16,7 +16,7 @@ export const uzb = {
 
   showcase: {
     h1: "JustRobotics",
-    h4: "exnologiyalar va san'at olamiga yo'lboshchingiz",
+    h4: "Texnologiyalar va san'at olamiga yo'lboshchingiz",
     p: "bepul birinchi darsni oling",
     btn: "Kurslarga o'tish",
   },

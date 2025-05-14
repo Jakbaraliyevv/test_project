@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -8,7 +8,7 @@ function Navbar({ changLanguage }) {
   const changLanguageClick = (value) => {
     changLanguage(value);
   };
-
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Курсы");
   const [active, setActive] = useState(false);
@@ -104,7 +104,10 @@ function Navbar({ changLanguage }) {
               </div>
 
               <Link to={"#"}>{t("navbar.contact")}</Link>
-              <button className="btn  hidden lg:block">
+              <button
+                onClick={() => navigate("/register")}
+                className="btn  hidden lg:block"
+              >
                 {t("navbar.aloqa")}
               </button>
             </div>
@@ -152,10 +155,11 @@ function Navbar({ changLanguage }) {
             <div className="md:hidden mt-4 pb-4 space-y-4">
               <div className="flex flex-col gap-4 font-normal text-white">
                 <Link to={"#"} className="block py-2">
-                  Главная
+                  {t("navbar.home")}
                 </Link>
                 <Link to={"#"} className="block py-2 flex gap-1">
-                  <span>О</span> нас
+                  <span> {t("navbar.span")}</span>
+                  {t("navbar.about")}
                 </Link>
 
                 <div className="relative" ref={dropdownRef}>
@@ -197,9 +201,14 @@ function Navbar({ changLanguage }) {
                 </div>
 
                 <Link to={"#"} className="block py-2">
-                  Контакты
+                  {t("navbar.contact")}
                 </Link>
-                <button className="btn w-full py-3">Позвонить</button>
+                <button
+                  onClick={() => navigate("/register")}
+                  className="btn w-full py-3"
+                >
+                  {t("navbar.aloqa")}
+                </button>
               </div>
             </div>
           )}
